@@ -36,5 +36,9 @@ namespace InputOutputStrea
         {
             File.Copy(filePath, copyFile);
         }
+        public void DeleteFile()
+        {
+            File.Delete(copyFile);
+        }
     }
 }
