@@ -40,5 +40,24 @@ namespace InputOutputStrea
         {
             File.Delete(copyFile);
         }
+        public void UsingStreamReader()
+        {
+            if (File.Exists(filePath))
+            {
+                StreamReader read = new StreamReader(filePath);
+                try
+                {
+                    string s = "";
+                    while ((s = read.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

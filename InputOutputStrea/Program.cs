@@ -9,7 +9,7 @@ public class Program
         IOStreamOperation operation = new IOStreamOperation();
         while (check)
         { 
-        Console.WriteLine(" Checking File is Exists or not 1\n Reading Line by Line From File 2\n Reading Text From File 3\n Copy Ony File Into AnotherFile 4\n Delete File 5\n");
+        Console.WriteLine(" Checking File is Exists or not 1\n Reading Line by Line From File 2\n Reading Text From File 3\n Copy Ony File Into AnotherFile 4\n Delete File 5\n Reading Data From File Using StreamReader 6\n");
             Console.WriteLine("$$$$$$$$$$$$$ Enter the Above Option $$$$$$$$$$$$$");
             int option=Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -29,8 +29,11 @@ public class Program
                 case 4:
                     operation.CopyFile();
                     break;
-                         case 5:
+                case 5:
                     operation.DeleteFile();
+                    break;
+                case 6:
+                    operation.UsingStreamReader();
                     break;
                 default:
                     Console.WriteLine("Enter the Valid Number to Perform the Specific Operation");
