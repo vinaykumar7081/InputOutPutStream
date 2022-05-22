@@ -9,6 +9,7 @@ namespace InputOutputStrea
     public class IOStreamOperation
     {
         string filePath =@"D:\InputOutputProblem\InputOutPutStream\InputOutputStrea\ContentsFile.txt";
+        string copyFile = @"D:\InputOutputProblem\InputOutPutStream\InputOutputStrea\CopiedContents.txt";
         public void FileExists()
         {
             if (File.Exists(filePath))
@@ -30,6 +31,10 @@ namespace InputOutputStrea
         {
             string text = File.ReadAllText(filePath);
             Console.WriteLine("Text are Presen in the File:->" + text);
+        }
+        public void CopyFile()
+        {
+            File.Copy(filePath, copyFile);
         }
     }
 }
